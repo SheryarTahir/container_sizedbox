@@ -21,9 +21,11 @@ class Container_Sized extends StatelessWidget {
           height: 100,
           width: 100,
           decoration: BoxDecoration(
-            color: Colors.blueAccent,
-            borderRadius: BorderRadius.circular(20),
-          ),
+              color: Colors.blueAccent,
+              borderRadius: BorderRadius.circular(20),
+              boxShadow: const [
+                BoxShadow(blurRadius: 20, color: Colors.blue),
+              ]),
           child: const Center(
             child: Text(
               "Hello",
