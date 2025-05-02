@@ -19,7 +19,7 @@ class Rowscols extends StatelessWidget {
           height: h,
           width: w,
           color: Colors.yellow,
-          child: Column(
+          child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Container(

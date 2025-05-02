@@ -1,3 +1,4 @@
+import 'package:container_sizedbox/widgets/button.dart';
 import 'package:container_sizedbox/widgets/cotainer_sized.dart';
 import 'package:container_sizedbox/widgets/rowscols.dart';
 import 'package:flutter/material.dart';
@@ -15,7 +16,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme:
           ThemeData(brightness: Brightness.dark, primaryColor: Colors.purple),
-      home: const Rowscols(),
+      home: const Button(),
     );
   }
 }
