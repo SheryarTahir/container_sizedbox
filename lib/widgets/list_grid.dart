@@ -5,86 +5,30 @@ class ListGrid extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    List<String> fruits = ['Mango', 'Orange', 'Banana', 'Strawberry'];
+    Map fruitsPerson = {
+      'fruits': ['Mango', 'Orange', 'Banana', 'Strawberry'],
+      'names': ['Sheryar', 'Furqan', 'Tayyab', 'Hamza'],
+    };
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Theme.of(context).primaryColor,
         title: const Text("LIST & GRID VIEW"),
       ),
-      body: ListView(
-        children: const [
-          Card(
+      body: ListView.builder(
+        itemCount: fruits.length,
+        itemBuilder: (context, index) {
+          return Card(
             child: ListTile(
-              title: Text("Oranges"),
-              subtitle: Text("Sheryar"),
+              onTap: () {
+                print(fruitsPerson['fruits'][index]);
+              },
+              leading: const Icon(Icons.person),
+              title: Text(fruitsPerson['fruits'][index]),
+              subtitle: Text(fruitsPerson['names'][index]),
             ),
-          ),
-          Card(
-            child: ListTile(
-              title: Text("Oranges"),
-              subtitle: Text("Sheryar"),
-            ),
-          ),
-          Card(
-            child: ListTile(
-              title: Text("Oranges"),
-              subtitle: Text("Sheryar"),
-            ),
-          ),
-          Card(
-            child: ListTile(
-              title: Text("Oranges"),
-              subtitle: Text("Sheryar"),
-            ),
-          ),
-          Card(
-            child: ListTile(
-              title: Text("Oranges"),
-              subtitle: Text("Sheryar"),
-            ),
-          ),
-          Card(
-            child: ListTile(
-              title: Text("Oranges"),
-              subtitle: Text("Sheryar"),
-            ),
-          ),
-          Card(
-            child: ListTile(
-              title: Text("Oranges"),
-              subtitle: Text("Sheryar"),
-            ),
-          ),
-          Card(
-            child: ListTile(
-              title: Text("Oranges"),
-              subtitle: Text("Sheryar"),
-            ),
-          ),
-          Card(
-            child: ListTile(
-              title: Text("Oranges"),
-              subtitle: Text("Sheryar"),
-            ),
-          ),
-          Card(
-            child: ListTile(
-              title: Text("Oranges"),
-              subtitle: Text("Sheryar"),
-            ),
-          ),
-          Card(
-            child: ListTile(
-              title: Text("Oranges"),
-              subtitle: Text("Sheryar"),
-            ),
-          ),
-          Card(
-            child: ListTile(
-              title: Text("Oranges"),
-              subtitle: Text("Sheryar"),
-            ),
-          ),
-        ],
+          );
+        },
       ),
     );
   }
