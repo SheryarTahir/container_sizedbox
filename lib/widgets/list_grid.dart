@@ -15,21 +15,30 @@ class ListGrid extends StatelessWidget {
         backgroundColor: Theme.of(context).primaryColor,
         title: const Text("LIST & GRID VIEW"),
       ),
-      body: ListView.builder(
-        itemCount: fruits.length,
-        itemBuilder: (context, index) {
-          return Card(
-            child: ListTile(
-              onTap: () {
-                print(fruitsPerson['fruits'][index]);
-              },
-              leading: const Icon(Icons.person),
-              title: Text(fruitsPerson['fruits'][index]),
-              subtitle: Text(fruitsPerson['names'][index]),
-            ),
-          );
-        },
-      ),
+      body: GridView.builder(
+          itemCount: fruits.length,
+          gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+              crossAxisCount: 4),
+          itemBuilder: (context, index) {
+            return Card(
+              child: Center(child: Text(fruits[index])),
+            );
+          }),
+      // ListView.builder(
+      //   itemCount: fruits.length,
+      //   itemBuilder: (context, index) {
+      //     return Card(
+      //       child: ListTile(
+      //         onTap: () {
+      //           print(fruitsPerson['fruits'][index]);
+      //         },
+      //         leading: const Icon(Icons.person),
+      //         title: Text(fruitsPerson['fruits'][index]),
+      //         subtitle: Text(fruitsPerson['names'][index]),
+      //       ),
+      //     );
+      //   },
+      // ),
     );
   }
 }
