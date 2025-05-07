@@ -1,4 +1,5 @@
 import 'package:container_sizedbox/widgets/button.dart';
+import 'package:container_sizedbox/widgets/dismissible.dart';
 import 'package:container_sizedbox/widgets/list_grid.dart';
 import 'package:container_sizedbox/widgets/sackbar.dart';
 import 'package:flutter/material.dart';
@@ -16,7 +17,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme:
           ThemeData(brightness: Brightness.dark, primaryColor: Colors.purple),
-      home: const SnackbarWidget(),
+      home: const DismissibleWidget(),
     );
   }
 }
