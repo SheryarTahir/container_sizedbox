@@ -1,3 +1,4 @@
+import 'package:container_sizedbox/widgets/Alert.dart';
 import 'package:container_sizedbox/widgets/Drawer.dart';
 import 'package:container_sizedbox/widgets/ImageWidget.dart';
 import 'package:container_sizedbox/widgets/button.dart';
@@ -19,7 +20,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme:
           ThemeData(brightness: Brightness.dark, primaryColor: Colors.purple),
-      home: const Imagewidget(),
+      home: const AlertWidget(),
     );
   }
 }
