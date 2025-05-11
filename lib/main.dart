@@ -1,6 +1,7 @@
 import 'package:container_sizedbox/widgets/Alert.dart';
 import 'package:container_sizedbox/widgets/Drawer.dart';
 import 'package:container_sizedbox/widgets/ImageWidget.dart';
+import 'package:container_sizedbox/widgets/bottomsheet.dart';
 import 'package:container_sizedbox/widgets/button.dart';
 import 'package:container_sizedbox/widgets/dismissible.dart';
 import 'package:container_sizedbox/widgets/list_grid.dart';
@@ -19,8 +20,8 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme:
-          ThemeData(brightness: Brightness.dark, primaryColor: Colors.purple),
-      home: const AlertWidget(),
+          ThemeData(brightness: Brightness.dark, primaryColor: Colors.blueGrey),
+      home: const Bottomsheetwidget(),
     );
   }
 }
